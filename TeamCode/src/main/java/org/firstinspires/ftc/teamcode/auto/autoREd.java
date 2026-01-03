@@ -13,14 +13,14 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 import org.firstinspires.ftc.teamcode.pedroPathing.Constants;
 
 @Configurable
-@Autonomous(name = "auto", group = ".ftc23403")
-public class auto extends OpMode {
+@Autonomous(name = "auto reds", group = ".ftc23403")
+public class autoREd extends OpMode {
     private Follower follower;
     private Timer pathTimer, actionTimer, opmodeTimer;
     private ElapsedTime timer;
     private int pathState;
-    public static final Pose startPose = new Pose(26.9, 134.2, Math.toRadians(53));
-    public static final Pose parkPose = new Pose(24, 99, Math.toRadians(53));
+    public static final Pose startPose = new Pose(26.9, 134.2, Math.toRadians(53)).mirror();
+    public static final Pose parkPose = new Pose(24, 99, Math.toRadians(53)).mirror();
     private PathChain park;
     boolean parkStarted = false;
 
